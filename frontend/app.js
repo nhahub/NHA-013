@@ -7,7 +7,7 @@ let RESPONSES_DATA = null;
 let SOLUTIONS_DATA = null;
 let isConfigLoaded = false;
 
-const API_URL = 'http://127.0.0.1:8000/predict_health';
+const API_URL = 'https://adhamelmalhy-chatbot.hf.space/predict_health';
 
 let chatState = {
     mode: 'greeting',
