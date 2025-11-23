@@ -1,8 +1,0 @@
-# space.yaml
-
-# تحديد بيئة التشغيل كـ Docker
-docker:
-  image: Dockerfile
-
-# تحديد الأجهزة المجانية
-hardware: cpu-basic
