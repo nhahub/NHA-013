@@ -1,0 +1,14 @@
+# .gitignore: Files to ignore from Git history
+
+# 1. Virtual Environments (CRITICAL)
+venv/
+.venv/
+
+# 2. Large Binary/Library Files (Over 100MB)
+*.dll
+*.pyd
+
+# 3. Large Data/Notebooks
+*.ipynb
+*.csv
+__pycache__/

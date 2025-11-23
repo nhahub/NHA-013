@@ -1,0 +1,46 @@
+/* Default (Desktop) */
+#signup-form,
+#signin-form {
+    margin-top: 40px;
+    /* تنزل شوية من فوق */
+    width: 100%;
+    max-width: 400px;
+    /* يتحكم في عرض الفورم */
+    box-sizing: border-box;
+}
+
+/* Tablets (<=1024px) */
+@media (max-width: 1024px) {
+
+    #signup-form,
+    #signin-form {
+        max-width: 350px;
+        margin-top: 30px;
+        padding: 2rem;
+        /* أقل padding */
+    }
+}
+
+/* Small Tablets / Large Phones (<=768px) */
+@media (max-width: 768px) {
+
+    #signup-form,
+    #signin-form {
+        max-width: 90%;
+        margin-top: 20px;
+        padding: 1.5rem;
+    }
+}
+
+/* Mobile (<=480px) */
+@media (max-width: 480px) {
+
+    #signup-form,
+    #signin-form {
+        width: 95%;
+        margin-top: 15px;
+        padding: 1rem;
+        border-radius: 1rem;
+        /* أصغر شوية */
+    }
+}
