@@ -1,0 +1,266 @@
+body {
+    box-sizing: border-box;
+}
+
+html,
+body {
+    height: 100%;
+    margin: 0;
+    padding: 0;
+}
+
+
+#app {
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    background: linear-gradient(135deg, #1e3a8a 0%, #3b82f6 30%, #ffffff 100%);
+}
+
+
+
+
+
+:root {
+    --navy-blue: #1e3a8a;
+    --light-navy: #3b82f6;
+    --white: #ffffff;
+    --light-gray: #f8fafc;
+    --dark-gray: #64748b;
+}
+
+
+
+#signup-form {
+    margin-top: 80px;
+    /* الفورم ينزل تحت شويه */
+    width: 100%;
+    max-width: 400px;
+}
+
+
+
+
+/* Animations */
+.fade-in {
+    animation: fadeIn 0.6s ease-out;
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.slide-in {
+    animation: slideIn 0.4s ease-out;
+}
+
+@keyframes slideIn {
+    from {
+        transform: translateX(-100%);
+    }
+
+    to {
+        transform: translateX(0);
+    }
+}
+
+.slide-out {
+    animation: slideOut 0.4s ease-in;
+}
+
+@keyframes slideOut {
+    from {
+        transform: translateX(0);
+    }
+
+    to {
+        transform: translateX(-100%);
+    }
+}
+
+.message-pop {
+    animation: messagePop 0.5s cubic-bezier(0.68, -0.55, 0.265, 1.55);
+}
+
+@keyframes messagePop {
+    0% {
+        opacity: 0;
+        transform: scale(0.8) translateY(15px);
+    }
+
+    100% {
+        opacity: 1;
+        transform: scale(1) translateY(0);
+    }
+}
+
+.shake {
+    animation: shake 0.6s ease-in-out;
+}
+
+@keyframes shake {
+
+    0%,
+    100% {
+        transform: translateX(0);
+    }
+
+    10%,
+    30%,
+    50%,
+    70%,
+    90% {
+        transform: translateX(-8px);
+    }
+
+    20%,
+    40%,
+    60%,
+    80% {
+        transform: translateX(8px);
+    }
+}
+
+.typing-dots {
+    animation: typing 1.4s infinite;
+}
+
+@keyframes typing {
+
+    0%,
+    60%,
+    100% {
+        transform: translateY(0);
+    }
+
+    30% {
+        transform: translateY(-10px);
+    }
+}
+
+.typing-dots:nth-child(2) {
+    animation-delay: 0.2s;
+}
+
+.typing-dots:nth-child(3) {
+    animation-delay: 0.4s;
+}
+
+/* Page transitions */
+.page-transition {
+    transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+/* Chat gradients */
+.chat-gradient-light {
+    background: linear-gradient(135deg, #1e3a8a 0%, #3b82f6 30%, #ffffff 100%);
+}
+
+.chat-gradient-dark {
+    background: linear-gradient(135deg, #0f172a 0%, #1e293b 30%, #334155 100%);
+}
+
+/* Message bubbles */
+.user-message {
+    background: rgba(30, 58, 138, 0.9);
+    backdrop-filter: blur(15px);
+    border: 1px solid rgba(30, 58, 138, 0.3);
+}
+
+.bot-message {
+    background: rgba(255, 255, 255, 0.9);
+    backdrop-filter: blur(15px);
+    border: 1px solid rgba(255, 255, 255, 0.3);
+}
+
+/* Dark mode styles */
+.dark-mode {
+    background: #0f172a;
+    color: #f1f5f9;
+}
+
+.dark-mode .bg-white {
+    background-color: #1e293b !important;
+}
+
+.dark-mode .bg-gray-50 {
+    background-color: #0f172a !important;
+}
+
+.dark-mode .bg-gray-100 {
+    background-color: #334155 !important;
+}
+
+.dark-mode .text-gray-900 {
+    color: #f1f5f9 !important;
+}
+
+.dark-mode .text-gray-800 {
+    color: #e2e8f0 !important;
+}
+
+.dark-mode .text-gray-700 {
+    color: #cbd5e1 !important;
+}
+
+.dark-mode .text-gray-600 {
+    color: #94a3b8 !important;
+}
+
+.dark-mode .border-gray-200 {
+    border-color: #475569 !important;
+}
+
+.dark-mode .border-gray-300 {
+    border-color: #64748b !important;
+}
+
+.dark-mode .hover\:bg-gray-50:hover {
+    background-color: #334155 !important;
+}
+
+.dark-mode .hover\:bg-gray-100:hover {
+    background-color: #475569 !important;
+}
+
+.dark-mode .bot-message {
+    background: rgba(30, 41, 59, 0.9);
+    backdrop-filter: blur(15px);
+    border: 1px solid rgba(71, 85, 105, 0.3);
+}
+
+.dark-mode .user-message {
+    background: rgba(59, 130, 246, 0.9);
+    backdrop-filter: blur(15px);
+    border: 1px solid rgba(59, 130, 246, 0.3);
+}
+
+/* Toggle switch */
+.toggle-switch {
+    transition: all 0.3s ease;
+}
+
+/* Input focus */
+.input-focus:focus {
+    box-shadow: 0 0 0 3px rgba(59, 130, 246, 0.1);
+    border-color: #3b82f6;
+}
+
+/* Sidebar overlay */
+.sidebar-overlay {
+    background: rgba(0, 0, 0, 0.5);
+    backdrop-filter: blur(5px);
+}
+
+/* Smooth scrolling */
+.smooth-scroll {
+    scroll-behavior: smooth;
+}
