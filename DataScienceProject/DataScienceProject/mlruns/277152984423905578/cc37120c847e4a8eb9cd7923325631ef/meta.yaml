@@ -1,0 +1,14 @@
+artifact_uri: file:///c:/Users/bidoo/Downloads/DataScienceProject/mlruns/277152984423905578/cc37120c847e4a8eb9cd7923325631ef/artifacts
+end_time: 1763387718885
+entry_point_name: ''
+experiment_id: '277152984423905578'
+lifecycle_stage: active
+run_id: cc37120c847e4a8eb9cd7923325631ef
+run_name: CatBoost_Raw_Data
+source_name: ''
+source_type: 4
+source_version: ''
+start_time: 1763387450474
+status: 3
+tags: []
+user_id: bidoo

@@ -1,0 +1,14 @@
+artifact_uri: file:///c:/Users/bidoo/Downloads/DataScienceProject/mlruns/277152984423905578/3911d5341fb7419a8867d5574144c61d/artifacts
+end_time: 1763389708101
+entry_point_name: ''
+experiment_id: '277152984423905578'
+lifecycle_stage: active
+run_id: 3911d5341fb7419a8867d5574144c61d
+run_name: Stacked_Model_Run
+source_name: ''
+source_type: 4
+source_version: ''
+start_time: 1763388703580
+status: 3
+tags: []
+user_id: bidoo

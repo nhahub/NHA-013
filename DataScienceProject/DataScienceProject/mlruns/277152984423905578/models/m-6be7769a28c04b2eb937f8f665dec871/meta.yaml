@@ -1,0 +1,10 @@
+artifact_location: file:///c:/Users/bidoo/Downloads/DataScienceProject/mlruns/277152984423905578/models/m-6be7769a28c04b2eb937f8f665dec871/artifacts
+creation_timestamp: 1763395552273
+experiment_id: '277152984423905578'
+last_updated_timestamp: 1763395563915
+model_id: m-6be7769a28c04b2eb937f8f665dec871
+model_type: null
+name: xgb_optuna_model
+source_run_id: 8545643c6264451b886e4dd5c7ace671
+status: 2
+status_message: null

@@ -1,0 +1,10 @@
+artifact_location: file:///c:/Users/bidoo/Downloads/DataScienceProject/mlruns/277152984423905578/models/m-e4a1732672214bbfb455011c2f585fe8/artifacts
+creation_timestamp: 1763386444104
+experiment_id: '277152984423905578'
+last_updated_timestamp: 1763386473294
+model_id: m-e4a1732672214bbfb455011c2f585fe8
+model_type: null
+name: catboost_model
+source_run_id: 2466547670944f6ea1343e53ed673556
+status: 2
+status_message: null

@@ -1,0 +1,14 @@
+artifact_uri: file:///c:/Users/bidoo/Downloads/DataScienceProject/mlruns/277152984423905578/656980c781cf42e7bc738c65fb26f849/artifacts
+end_time: 1763391483539
+entry_point_name: ''
+experiment_id: '277152984423905578'
+lifecycle_stage: active
+run_id: 656980c781cf42e7bc738c65fb26f849
+run_name: MLP_Run
+source_name: ''
+source_type: 4
+source_version: ''
+start_time: 1763391356929
+status: 3
+tags: []
+user_id: bidoo

@@ -1,0 +1,14 @@
+artifact_uri: file:///c:/Users/bidoo/Downloads/DataScienceProject/mlruns/277152984423905578/2466547670944f6ea1343e53ed673556/artifacts
+end_time: 1763386473302
+entry_point_name: ''
+experiment_id: '277152984423905578'
+lifecycle_stage: active
+run_id: 2466547670944f6ea1343e53ed673556
+run_name: CatBoost_Target_Encoding
+source_name: ''
+source_type: 4
+source_version: ''
+start_time: 1763386424609
+status: 3
+tags: []
+user_id: bidoo

@@ -1,0 +1,10 @@
+artifact_location: file:///c:/Users/bidoo/Downloads/DataScienceProject/mlruns/277152984423905578/models/m-7be164e25e95444699441a1b4551abbf/artifacts
+creation_timestamp: 1763390877447
+experiment_id: '277152984423905578'
+last_updated_timestamp: 1763390884912
+model_id: m-7be164e25e95444699441a1b4551abbf
+model_type: null
+name: final_xgb_model
+source_run_id: ad9afc69e96c4ade95dce895690e9ce6
+status: 2
+status_message: null

@@ -1,0 +1,22 @@
+artifact_path: file:///c:/Users/bidoo/Downloads/DataScienceProject/mlruns/277152984423905578/models/m-e4a1732672214bbfb455011c2f585fe8/artifacts
+flavors:
+  catboost:
+    catboost_version: 1.2.8
+    code: null
+    data: model.cb
+    model_type: CatBoostClassifier
+    save_format: cbm
+  python_function:
+    data: model.cb
+    env:
+      conda: conda.yaml
+      virtualenv: python_env.yaml
+    loader_module: mlflow.catboost
+    python_version: 3.11.4
+mlflow_version: 3.6.0
+model_id: m-e4a1732672214bbfb455011c2f585fe8
+model_size_bytes: 846736
+model_uuid: m-e4a1732672214bbfb455011c2f585fe8
+prompts: null
+run_id: 2466547670944f6ea1343e53ed673556
+utc_time_created: '2025-11-17 13:34:04.176525'

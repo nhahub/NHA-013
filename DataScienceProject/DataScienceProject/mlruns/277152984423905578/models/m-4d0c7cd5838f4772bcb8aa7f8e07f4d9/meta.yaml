@@ -1,0 +1,10 @@
+artifact_location: file:///c:/Users/bidoo/Downloads/DataScienceProject/mlruns/277152984423905578/models/m-4d0c7cd5838f4772bcb8aa7f8e07f4d9/artifacts
+creation_timestamp: 1763389700018
+experiment_id: '277152984423905578'
+last_updated_timestamp: 1763389708089
+model_id: m-4d0c7cd5838f4772bcb8aa7f8e07f4d9
+model_type: null
+name: stacked_model
+source_run_id: 3911d5341fb7419a8867d5574144c61d
+status: 2
+status_message: null
