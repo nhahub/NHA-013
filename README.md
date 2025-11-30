@@ -332,7 +332,7 @@ git push hf main
 const API_URL = 'https://adhamelmalhy-chatbot.hf.space/predict_health';
 ```
 
-**🔗 Live Front-End:** [Vercel Deployment](https://chatbot-psi-liart.vercel.com/adham-mahmouds-projects/chatbot)
+**🔗 Live Front-End:** [Vercel Deployment](https://vercel.com/adham-mahmouds-projects/chatbot)
 
 #### Deploy Steps
 1. Push code to GitHub
