@@ -272,35 +272,44 @@ app.add_middleware(
 )
 @app.post("/predict_health")
 def predict_final_score(user_data: FinalAnswersModel):
-    """Receive user answers, predict stability, and return solutions report."""
+    # Receive user answers, predict stability, and return solutions report.
     try:
         answers_dict = user_data.model_dump()
 
         # Prediction step
-
         risk_score_raw = get_prediction_from_user_input(answers_dict)
-        stability_score = 1.0 - risk_score_raw # عكس النتيجة
+        stability_score = 1.0 - risk_score_raw  # عكس النتيجة للحصول على الاستقرار
 
         # Solutions generation
-        solutions_report = build_solutions_report(answers_dict, SOLUTIONS)
+        solutions_report = build_solutions_report(answers_dict)
 
-        # Build final message
+        # Build final message metrics
         stability_percent = round(stability_score * 100, 2)
+        risk_percent_display = round(risk_score_raw * 100, 2)
 
+        # تحديد فئة النصيحة بناءً على النسبة
         if stability_percent >= 90:
-            decision_advice = "✅ هذا يعني أن الموديل لا يرى حاليًا ضرورة ملحة للحصول على رعاية متخصصة."
+            tiered_advice = "النسبة ممتازة ولا يوجد داعي للقلق."
         elif stability_percent >= 50:
-            decision_advice = "⚠️ النسبة جيدة، لكن يفضل متابعة الحلول التي سنعرضها الآن."
+            tiered_advice = "الحالة مستقرة بشكل معقول ويفضل متابعة النصائح."
         else:
-            decision_advice = "🚨 النسبة منخفضة، يرجى التفكير جدياً في الخيارات المتاحة للمساعدة."
+            tiered_advice = "النسبة منخفضة ويُفضل التفكير في دعم متخصص."
+
+        # 🚨 التعديل الحاسم: بناء الرسالة النهائية المُفصلة
+        final_advice = (
+            f"بناءً على تحليل إجاباتك، نسبة الصحة النفسية المناسبة لديك: **{stability_percent}%** "
+            f"(مستوى الخطورة: **{risk_percent_display}%**).\n\n"
+            f"{tiered_advice}"
+        )
 
         return {
             "status": "success",
             "stability_percentage": stability_percent,
-            "risk_percentage": round(risk_score_raw * 100, 2), # المخاطر هي النتيجة الخام للموديل
-            "final_advice": decision_advice,
+            "risk_percentage": risk_percent_display,
+            "final_advice": final_advice,
             "solutions_report": solutions_report
         }
+
 
     except Exception as e:
         import traceback
