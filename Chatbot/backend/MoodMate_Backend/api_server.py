@@ -270,7 +270,6 @@ app.add_middleware(
     allow_methods=["*"],
     allow_headers=["*"],
 )
-
 @app.post("/predict_health")
 def predict_final_score(user_data: FinalAnswersModel):
     """Receive user answers, predict stability, and return solutions report."""
@@ -278,7 +277,9 @@ def predict_final_score(user_data: FinalAnswersModel):
         answers_dict = user_data.model_dump()
 
         # Prediction step
-        stability_score = get_prediction_from_user_input(answers_dict)
+
+        risk_score_raw = get_prediction_from_user_input(answers_dict)
+        stability_score = 1.0 - risk_score_raw # عكس النتيجة
 
         # Solutions generation
         solutions_report = build_solutions_report(answers_dict, SOLUTIONS)
@@ -296,7 +297,7 @@ def predict_final_score(user_data: FinalAnswersModel):
         return {
             "status": "success",
             "stability_percentage": stability_percent,
-            "risk_percentage": round((1 - stability_score) * 100, 2),
+            "risk_percentage": round(risk_score_raw * 100, 2), # المخاطر هي النتيجة الخام للموديل
             "final_advice": decision_advice,
             "solutions_report": solutions_report
         }
@@ -306,7 +307,6 @@ def predict_final_score(user_data: FinalAnswersModel):
         print(f"❌ Backend Error: {str(e)}")
         print(traceback.format_exc())
         raise HTTPException(status_code=500, detail=f"فشل في معالجة التنبؤ: {str(e)}")
-
 # ------------------------
 # Run server (development)
 # ------------------------
